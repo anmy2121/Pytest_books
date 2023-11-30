@@ -88,7 +88,6 @@ def test_list_with_no_author_s_firstname(monkeypatch):
 
 
 #cas 5
-
 def test_list_with_no_author(monkeypatch):
     def mock_get_books(*args):
         return [
