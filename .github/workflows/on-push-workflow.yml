@@ -18,9 +18,8 @@ jobs:
         run: pytest
 
       - name: Lint in ruff
-        run: |
-         ruff --output-format=github .
+        run: ruff check .
         continue-on-error: false
-      - name: Lint with mypy
+      - name: Static type checking with mypy
         run: mypy .
         continue-on-error: true

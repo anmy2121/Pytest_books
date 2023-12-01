@@ -38,6 +38,4 @@ def truncate(value: str, n_char: int) -> str:
     if len(value) < n_char:
         return value
 
-    return value[:n_char] + '...'
-
-
+    return value[:n_char] + "..."
