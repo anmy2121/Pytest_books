@@ -16,3 +16,10 @@ jobs:
         run: pip install --no-cache-dir -r requirements.txt
       - name: Unit tests
         run: pytest
+
+      - name: Lint in ruff
+        run: ruff check .
+        continue-on-error: false
+      - name: Static type checking with mypy
+        run: mypy .
+        continue-on-error: true
