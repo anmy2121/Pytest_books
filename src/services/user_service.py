@@ -1,7 +1,6 @@
 from .string_service import to_lowercase
 from .user_fetcher_service import UserFetcherService
 
-class Noname
 class UserService:
     user_fetcher_service: UserFetcherService
 
