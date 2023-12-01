@@ -1,6 +1,6 @@
 name: Commit workflow
 run-name: Executing every commit required actions (tests, static analyses)
-on: [push]
+on: [ push ]
 jobs:
   unit-tests:
     runs-on: ubuntu-latest
@@ -12,3 +12,7 @@ jobs:
           python-version: '3.12'
       - name: Display Python version
         run: python -c "import sys; print(sys.version)"
+      - name: Install dependencies
+        run: pip install --no-cache-dir -r requirements.txt
+      - name: Unit tests
+        run: pytest
